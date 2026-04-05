@@ -13,3 +13,19 @@ test("Single Element Locating", async ({ page }) => {
 
   await page.pause();
 });
+
+test("Multiple Elements Locating", async ({ page }) => {
+  await page.goto("opencart/index.php?route=account/register");
+
+  const formControl = page.locator(".form-control");
+
+  console.log(await formControl.count());
+
+  await formControl.first().fill("Samsung");
+
+  await formControl.nth(1).fill("Shouvik");
+  await formControl.nth(2).fill("Datta");
+  await formControl.last().fill("1234");
+
+  await page.pause();
+});
