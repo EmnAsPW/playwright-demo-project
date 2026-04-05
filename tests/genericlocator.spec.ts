@@ -7,7 +7,7 @@ test("Single Element Locating", async ({ page }) => {
   const lastNameTxt = page.locator("input[name='lastname']");
   const emailTxt = page.locator("//input[@name='email']");
 
-  await firstNameTxt.fill("Salman");
+  await firstNameTxt.fill("Sourov");
   await lastNameTxt.fill("Rahman");
   await emailTxt.fill("randomEmail@gmail.com");
 
@@ -23,8 +23,8 @@ test("Multiple Elements Locating", async ({ page }) => {
 
   await formControl.first().fill("Samsung");
 
-  await formControl.nth(1).fill("Shouvik");
-  await formControl.nth(2).fill("Datta");
+  await formControl.nth(1).fill("jimi");
+  await formControl.nth(2).fill("hasan");
   await formControl.last().fill("1234");
 
   await page.pause();
